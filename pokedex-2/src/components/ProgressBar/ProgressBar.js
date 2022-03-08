@@ -5,10 +5,13 @@ import "react-sweet-progress/lib/style.css";
 //Para baixar essa biblioteca usei --> npm i -S react-sweet-progress <--
 
 
-const ProgressBar = () => {
+const ProgressBar = (props) => {
     return(
+        <div>
+
+        <p>{props.statText}</p>
         <Progress
-        percent={30}
+        percent={props.percent}
         status="active"
         theme={{
             active: {
@@ -18,6 +21,7 @@ const ProgressBar = () => {
           
         }}
       />
+      </div>
     )
 }
 
