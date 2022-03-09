@@ -7,7 +7,3 @@ export const HeaderImage = styled.div`
     justify-content: center;
    
 `
-
-export const HeaderDiv = styled.div`
-grid-column: 1/-1;
-`
