@@ -33,8 +33,8 @@ const PokeCard = (props) => {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="secondary" variant="outlined">
+      <CardActions sx={{ display: 'flex', justifyContent: 'center', padding: '1rem' }}>
+        <Button size="small" color="secondary" variant="contained">
           Adicionar a Pokedéx
         </Button>
       </CardActions>
