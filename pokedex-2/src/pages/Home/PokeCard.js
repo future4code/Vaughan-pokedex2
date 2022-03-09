@@ -3,6 +3,7 @@ import { BASE_URL } from "../../constants/urls";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import { ImgCard } from "./styled";
 
 import { Button, CardActionArea, CardActions } from "@mui/material";
 
@@ -19,7 +20,7 @@ const PokeCard = (props) => {
         }}
         onClick={props.onClickCard}
       >
-        <img src={pokemon.sprites && pokemon.sprites.front_default} />
+        <ImgCard src={pokemon.sprites && pokemon.sprites.other["official-artwork"].front_default} />
         <CardContent>
           <Typography
             gutterBottom

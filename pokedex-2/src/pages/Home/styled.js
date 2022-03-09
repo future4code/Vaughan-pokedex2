@@ -8,3 +8,7 @@ export const CardContainer = styled.div`
     justify-content: center;
     align-items: center;
 `
+
+export const ImgCard = styled.img`
+width: 50%
+`
