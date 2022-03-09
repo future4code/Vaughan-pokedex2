@@ -7,10 +7,12 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton'
 import PokebolaNav from '../../assets/PokebolaNav.svg'
 import pokemonHeader from '../../assets/pokemon-header.png'
-import { HeaderImage } from './styled'
+import { HeaderImage, HeaderDiv } from './styled'
+//import {goToPokedex} from '../../routes/coordinator'
 
 export const Header = () => {
   return (
+    <HeaderDiv>
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
@@ -21,12 +23,13 @@ export const Header = () => {
             Pokédex
           </Typography>
           <HeaderImage>
-            <img src={pokemonHeader} />
+            <img src={pokemonHeader} alt="Pokemons arte" />
           </HeaderImage>
 
           <Button color="inherit">Pokédex</Button>
         </Toolbar>
       </AppBar>
     </Box>
+    </HeaderDiv>
   );
 }

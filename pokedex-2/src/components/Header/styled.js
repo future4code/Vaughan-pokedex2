@@ -5,4 +5,9 @@ export const HeaderImage = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+   
+`
+
+export const HeaderDiv = styled.div`
+grid-column: 1/-1;
 `
