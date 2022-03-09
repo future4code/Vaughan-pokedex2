@@ -15,7 +15,7 @@ const ProgressBar = (props) => {
         status="active"
         theme={{
             active: {
-                symbol: '',
+                symbol: props.value,
                 color: '#1b97e5',  //Pode modificar a cor 
             }
           
