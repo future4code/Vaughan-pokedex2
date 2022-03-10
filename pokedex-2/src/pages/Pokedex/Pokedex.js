@@ -16,23 +16,27 @@ const Pokedex = () => {
 
   const pokedexList =
     states.pokedex &&
-    states.pokedex.map((pokemon, index) => {
-      return (
-        <PokedexCard
-          key={pokemon.name}
-          name={pokemon.name}
-          onClickCard={() => goToPokemonDetail(navigate, pokemon.name)}
-          index={index}
-        />
-      );
-    });
+    states.pokedex.sort((a, b) => {
+      return a.id - b.id
+    })
+      .map((pokemon, index) => {
+        console.log(pokemon)
+        return (
+          <PokedexCard
+            key={pokemon.name}
+            name={pokemon.name}
+            onClickCard={() => goToPokemonDetail(navigate, pokemon.name)}
+            index={index}
+          />
+        );
+      });
   return (
     <div>
       <CardContainer>
         {loading && <Loading />}
         {!loading && states.pokedex && pokedexList}
         {!loading && states.pokedex.length === 0 && (
-            <ImgPokedexEmpty />
+          <ImgPokedexEmpty />
         )}
       </CardContainer>
     </div>

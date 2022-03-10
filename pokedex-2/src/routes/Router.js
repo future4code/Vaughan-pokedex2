@@ -2,11 +2,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from '../pages/Home/Home'
 import Pokedex from '../pages/Pokedex/Pokedex'
 import PokemonDetails from '../pages/PokemonDetails/PokemonDetails'
-import ErrorPage from '../pages/ErrorPage'
+import ErrorPage from '../pages/ErrorPage/ErrorPage'
 import { Header } from '../components/Header/Header'
 const Router = () => {
     return (<BrowserRouter>
-    <Header/>
+        <Header />
         <Routes>
             <Route exact path={"/"} element={<Home />} />
 

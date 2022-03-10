@@ -10,17 +10,17 @@ import { useContext } from "react";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 
 const PokeCard = (props) => {
-  const {states, sets, loading} = useContext(GlobalStateContext)
+  const { states, sets } = useContext(GlobalStateContext)
   const pokemon = useRequestData({}, `${BASE_URL}${props.name}`)[0];
- 
+
   const addToPokedex = (poke, index) => {
     const newPokeInPokedex = { ...poke }
     const newPokedex = [...states.pokedex, newPokeInPokedex]
     sets.setPokedex(newPokedex)
-    if(pokemon === poke){
+    if (pokemon === poke) {
       states.pokemonsHome.splice(index, 1)
     }
-    
+
   }
 
   return (
@@ -47,7 +47,7 @@ const PokeCard = (props) => {
         </CardContent>
       </CardActionArea>
       <CardActions sx={{ display: 'flex', justifyContent: 'center', padding: '1rem' }}>
-        <Button onClick={() => addToPokedex(pokemon , props.index)} size="small" color="secondary" variant="contained">
+        <Button onClick={() => addToPokedex(pokemon, props.index)} size="small" color="secondary" variant="contained">
           Adicionar a Pokedéx
         </Button>
       </CardActions>

@@ -46,7 +46,7 @@ const PokemonDetails = () => {
 
     return (
         <CardPokemonDetail>
-            <Typography variant='h4' sx={{ mt: '2%' }}>{pokemon.name && pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</Typography>
+            <Typography variant='h4' color='#5F5950' sx={{ mt: '2%' }}>{pokemon.name && pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</Typography>
             <img
                 src={
                     pokemon.sprites &&
