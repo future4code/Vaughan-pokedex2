@@ -5,27 +5,34 @@ import { CardContainer } from "./styled";
 import Loading from "../../components/Loading/Loading";
 import { useNavigate } from "react-router-dom";
 import { goToPokemonDetail } from "../../routes/coordinator";
+import GlobalStateContext from "../../global/GlobalStateContext";
+import { useContext } from "react";
 
 const Home = () => {
-  const [data, loading] = useRequestData({}, BASE_URL);
+  const {states, sets, loading} = useContext(GlobalStateContext)
+  console.log("STATES E SETS NA HOME", states, sets)
+
   const navigate = useNavigate();
 
   const pokemonList =
-    data.results &&
-    data.results.map((pokemon) => {
+    states.pokemonsHome &&
+    states.pokemonsHome.sort((poke) => {
+      return poke.url //Tentar ordenar pelo Id da url
+    }).map((pokemon, index) => {
       return (
         <PokeCard
           key={pokemon.name}
           name={pokemon.name}
           onClickCard={() => goToPokemonDetail(navigate, pokemon.name)}
+          index={index}
         />
       );
     });
-  console.log(data);
+  
   return (
     <CardContainer>
       {loading && <Loading />}
-      {!loading && data && pokemonList}
+      {!loading && states.pokemonsHome && pokemonList}
     </CardContainer>
   );
 };

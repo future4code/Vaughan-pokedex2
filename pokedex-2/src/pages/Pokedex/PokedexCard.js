@@ -9,18 +9,19 @@ import { useContext } from "react";
 
 import { Button, CardActionArea, CardActions } from "@mui/material";
 
-const PokeCard = (props) => {
+const PokedexCard = (props) => {
   const {states, sets, loading} = useContext(GlobalStateContext)
   const pokemon = useRequestData({}, `${BASE_URL}${props.name}`)[0];
  
-  const addToPokedex = (poke, index) => {
-    const newPokeInPokedex = { ...poke }
-    const newPokedex = [...states.pokedex, newPokeInPokedex]
-    sets.setPokedex(newPokedex)
+  const toRemove = (poke, index) => {
+    const newPokeInHome = { ...poke }
+    const newPokeHome = [...states.pokemonsHome, newPokeInHome]
+    sets.setPokemonsHome(newPokeHome)
     if(pokemon === poke){
-      states.pokemonsHome.splice(index, 1)
+      states.pokedex.splice(index, 1)
     }
     
+  //  sets.setPokedex(...states.pokedex, poke)
   }
 
   return (
@@ -47,12 +48,12 @@ const PokeCard = (props) => {
         </CardContent>
       </CardActionArea>
       <CardActions sx={{ display: 'flex', justifyContent: 'center', padding: '1rem' }}>
-        <Button onClick={() => addToPokedex(pokemon , props.index)} size="small" color="secondary" variant="contained">
-          Adicionar a Pokedéx
+        <Button onClick={() => toRemove(pokemon , props.index)} size="small" color="secondary" variant="contained">
+          Remover
         </Button>
       </CardActions>
     </Card>
   );
 };
 
-export default PokeCard;
+export default PokedexCard;
