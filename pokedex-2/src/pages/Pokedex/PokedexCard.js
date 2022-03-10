@@ -10,18 +10,16 @@ import { useContext } from "react";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 
 const PokedexCard = (props) => {
-  const {states, sets, loading} = useContext(GlobalStateContext)
+  const { states, sets } = useContext(GlobalStateContext)
   const pokemon = useRequestData({}, `${BASE_URL}${props.name}`)[0];
- 
+
   const toRemove = (poke, index) => {
     const newPokeInHome = { ...poke }
     const newPokeHome = [...states.pokemonsHome, newPokeInHome]
     sets.setPokemonsHome(newPokeHome)
-    if(pokemon === poke){
+    if (pokemon === poke) {
       states.pokedex.splice(index, 1)
     }
-    
-  //  sets.setPokedex(...states.pokedex, poke)
   }
 
   return (
@@ -48,7 +46,7 @@ const PokedexCard = (props) => {
         </CardContent>
       </CardActionArea>
       <CardActions sx={{ display: 'flex', justifyContent: 'center', padding: '1rem' }}>
-        <Button onClick={() => toRemove(pokemon , props.index)} size="small" color="secondary" variant="contained">
+        <Button onClick={() => toRemove(pokemon, props.index)} size="small" color="secondary" variant="contained">
           Remover
         </Button>
       </CardActions>
