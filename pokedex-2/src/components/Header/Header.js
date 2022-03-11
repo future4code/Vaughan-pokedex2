@@ -33,7 +33,7 @@ export const Header = () => {
             </HeaderImage>
 
             
-      <Badge color="secondary" badgeContent={states.count}>
+      <Badge color="secondary" badgeContent={states.count} showZero>
       <Button onClick={() => goToPokedex(navigate)} color="inherit">Pokédex</Button>
       </Badge>
             
