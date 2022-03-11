@@ -42,7 +42,7 @@ export const ButtonContainer = styled.div`
     }
 `
 
-export const Oi = styled.div`
+export const SkillContainer = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

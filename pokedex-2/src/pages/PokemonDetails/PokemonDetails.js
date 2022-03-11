@@ -3,7 +3,7 @@ import useRequestData from "../../hooks/useRequestData";
 import { BASE_URL } from "../../constants/urls";
 import { useParams } from "react-router-dom";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
-import { CardPokemonDetail, TypeContainer, CardStatsPoke, ButtonContainer, Oi } from './styled'
+import { CardPokemonDetail, TypeContainer, CardStatsPoke, ButtonContainer, SkillContainer } from './styled'
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import PokemonTypes from "../../components/PokemonTypes/PokemonTypes";
@@ -64,7 +64,7 @@ const PokemonDetails = () => {
                 <TypeContainer>
                     {currentInfo === "Tipos" && pokeType}
                 </TypeContainer>
-                {currentInfo === "Habilidades" && (<ScrollArea style={{ height: 250 }}><Oi>{pokeSkills}</Oi></ScrollArea>)}
+                {currentInfo === "Habilidades" && (<ScrollArea style={{ height: 250 }}><SkillContainer>{pokeSkills}</SkillContainer></ScrollArea>)}
             </CardStatsPoke>
         </CardPokemonDetail>
     );
