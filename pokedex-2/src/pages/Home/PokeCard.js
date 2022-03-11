@@ -50,6 +50,7 @@ const PokeCard = (props) => {
         <Button onClick={() => addToPokedex(pokemon, props.index)} size="small" color="secondary" variant="contained">
           Adicionar a Pokedéx
         </Button>
+        <Button onClick={props.onClickCardBtnDetails} color="success" variant="contained" size="small" >Ver detalhes</Button>
       </CardActions>
     </Card>
   );
