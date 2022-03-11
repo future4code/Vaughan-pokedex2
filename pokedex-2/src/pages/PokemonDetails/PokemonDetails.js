@@ -3,7 +3,7 @@ import useRequestData from "../../hooks/useRequestData";
 import { BASE_URL } from "../../constants/urls";
 import { useParams } from "react-router-dom";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
-import { CardPokemonDetail, TypeContainer, CardStatsPoke, ButtonContainer } from './styled'
+import { CardPokemonDetail, TypeContainer, CardStatsPoke, ButtonContainer, Oi } from './styled'
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import PokemonTypes from "../../components/PokemonTypes/PokemonTypes";
@@ -37,7 +37,7 @@ const PokemonDetails = () => {
 
     const pokeSkills = pokemon.moves && pokemon.moves.map((move) => {
         console.log(move)
-        return <Typography sx={{ mb: '1rem' }}>{move.move.name.toUpperCase()}</Typography>
+        return <Typography sx={{ margin: '0.75rem', '@media (max-width: 450px)': { margin: '0.5rem' } }}>{move.move.name.toUpperCase()}</Typography>
     })
 
     const onClickButton = (buttonName) => {
@@ -64,7 +64,7 @@ const PokemonDetails = () => {
                 <TypeContainer>
                     {currentInfo === "Tipos" && pokeType}
                 </TypeContainer>
-                {currentInfo === "Habilidades" && (<ScrollArea style={{ height: 250 }}>{pokeSkills}</ScrollArea>)}
+                {currentInfo === "Habilidades" && (<ScrollArea style={{ height: 250 }}><Oi>{pokeSkills}</Oi></ScrollArea>)}
             </CardStatsPoke>
         </CardPokemonDetail>
     );

@@ -10,5 +10,5 @@ export const CardContainer = styled.div`
 `
 
 export const ImgCard = styled.img`
-width: 50%
+    width: 50%
 `
