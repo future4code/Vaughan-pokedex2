@@ -4,6 +4,8 @@ import Pokedex from '../pages/Pokedex/Pokedex'
 import PokemonDetails from '../pages/PokemonDetails/PokemonDetails'
 import ErrorPage from '../pages/ErrorPage/ErrorPage'
 import { Header } from '../components/Header/Header'
+import PokeBattle from '../pages/PokeBattle/PokeBattle'
+
 const Router = () => {
     return (<BrowserRouter>
         <Header />
@@ -13,6 +15,8 @@ const Router = () => {
             <Route exact path={"/pokedex"} element={<Pokedex />} />
 
             <Route exact path={"/pokemon/:id"} element={<PokemonDetails />} />
+
+            <Route exact path={"battle"} element={<PokeBattle />} />
 
             <Route exact path={"*"} element={<ErrorPage />} />
         </Routes>
