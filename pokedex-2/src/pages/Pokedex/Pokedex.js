@@ -9,10 +9,8 @@ import Loading from "../../components/Loading/Loading";
 import ImgPokedexEmpty from "../../components/ImgPokedexEmpty/ImgPokedexEmpty";
 
 const Pokedex = () => {
-  const { states, sets, loading } = useContext(GlobalStateContext);
+  const { states, loading } = useContext(GlobalStateContext);
   const navigate = useNavigate();
-
-  console.log("STATES E SETS NA HOME", states, sets);
 
   const pokedexList =
     states.pokedex &&
@@ -20,7 +18,6 @@ const Pokedex = () => {
       return a.id - b.id
     })
       .map((pokemon, index) => {
-        console.log(pokemon)
         return (
           <PokedexCard
             key={pokemon.name}

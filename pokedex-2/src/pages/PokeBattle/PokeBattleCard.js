@@ -25,7 +25,6 @@ const PokeBattleCard = (props) => {
                         value={(statPoke.base_stat / 255) * 100}
                         label={statPoke.base_stat}
                     />
-
                 </TypeContainer>
             );
         });
@@ -56,7 +55,6 @@ const PokeBattleCard = (props) => {
                         </option>
                     )
                 })
-
                 }
             </Select>
             <img src={pokemon.sprites && pokemon.sprites.other["official-artwork"].front_default} />

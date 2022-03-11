@@ -36,7 +36,6 @@ const PokemonDetails = () => {
     })
 
     const pokeSkills = pokemon.moves && pokemon.moves.map((move) => {
-        console.log(move)
         return <Typography sx={{ margin: '0.75rem', '@media (max-width: 450px)': { margin: '0.5rem' } }}>{move.move.name.toUpperCase()}</Typography>
     })
 
