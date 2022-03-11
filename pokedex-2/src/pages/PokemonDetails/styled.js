@@ -30,10 +30,9 @@ export const ButtonContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 1rem 0;
-    width: 50vw;
     column-gap: 1rem;
 
-    @media (max-width: 450px) {
+    @media (max-width: 600px) {
         display: flex;
         flex-direction: column;
 
