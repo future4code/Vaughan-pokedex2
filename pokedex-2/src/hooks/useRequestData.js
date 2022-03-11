@@ -8,6 +8,7 @@ const useRequestData = (initialState, url) => {
 
     useEffect(() => {
         setLoading(true)
+      
         axios.get(url)
             .then((res) => {
                 setLoading(false)

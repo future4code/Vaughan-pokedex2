@@ -3,18 +3,22 @@ import GlobalStateContext from './GlobalStateContext'
 import useRequestData from "../hooks/useRequestData"
 import { BASE_URL } from "../constants/urls"
 
+
 const GlobalState = (props) => {
     const [pokedex, setPokedex] = useState([])
     const [pokemonsHome, setPokemonsHome] = useState([])
     const [count , setCount] = useState(0)
-    const [data, loading] = useRequestData({}, `${BASE_URL}?limit=90`);
+    const [currentPage, setCurrentPage] = useState(1)
+    const numberOfPage = 30 * (currentPage - 1)
+    const [data, loading] = useRequestData({}, `${BASE_URL}?limit=30&offset=${numberOfPage}`);
+ 
 
-    useEffect(() => {
+    useEffect(() => {    
         setPokemonsHome(data.results)
-    }, [data])
+    }, [data, currentPage])
 
-    const states = { pokedex, pokemonsHome, count }
-    const sets = { setPokedex, setPokemonsHome, setCount }
+    const states = { pokedex, pokemonsHome, count, currentPage }
+    const sets = { setPokedex, setPokemonsHome, setCount, setCurrentPage }
     return (
         <GlobalStateContext.Provider value={{ states, sets, loading }}>
             {props.children}
