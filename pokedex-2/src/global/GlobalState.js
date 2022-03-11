@@ -6,15 +6,15 @@ import { BASE_URL } from "../constants/urls"
 const GlobalState = (props) => {
     const [pokedex, setPokedex] = useState([])
     const [pokemonsHome, setPokemonsHome] = useState([])
-
+    const [count , setCount] = useState(0)
     const [data, loading] = useRequestData({}, `${BASE_URL}?limit=90`);
 
     useEffect(() => {
         setPokemonsHome(data.results)
     }, [data])
 
-    const states = { pokedex, pokemonsHome }
-    const sets = { setPokedex, setPokemonsHome }
+    const states = { pokedex, pokemonsHome, count }
+    const sets = { setPokedex, setPokemonsHome, setCount }
     return (
         <GlobalStateContext.Provider value={{ states, sets, loading }}>
             {props.children}
