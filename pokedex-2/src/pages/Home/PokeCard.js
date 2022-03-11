@@ -14,6 +14,7 @@ const PokeCard = (props) => {
   const pokemon = useRequestData({}, `${BASE_URL}${props.name}`)[0];
 
   const addToPokedex = (poke, index) => {
+    sets.setCount(states.count + 1)
     const newPokeInPokedex = { ...poke }
     const newPokedex = [...states.pokedex, newPokeInPokedex]
     sets.setPokedex(newPokedex)

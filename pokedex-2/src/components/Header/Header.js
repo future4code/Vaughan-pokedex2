@@ -9,8 +9,12 @@ import pokedex from "../../assets/pokedex.jpg";
 import { HeaderImage } from "./styled";
 import { goToHome, goToPokedex } from "../../routes/coordinator"
 import { useNavigate } from "react-router-dom";
+import Badge from '@mui/material/Badge';
+import GlobalStateContext from "../../global/GlobalStateContext";
+import { useContext } from "react";
 
 export const Header = () => {
+  const { states} = useContext(GlobalStateContext);
   const navigate = useNavigate()
 
   return (
@@ -28,7 +32,11 @@ export const Header = () => {
               <img src={pokedex} alt="Pokemons arte" />
             </HeaderImage>
 
-            <Button onClick={() => goToPokedex(navigate)} color="inherit">Pokédex</Button>
+            
+      <Badge color="secondary" badgeContent={states.count} showZero>
+      <Button onClick={() => goToPokedex(navigate)} color="inherit">Pokédex</Button>
+      </Badge>
+            
           </Toolbar>
         </AppBar>
       </Box>
