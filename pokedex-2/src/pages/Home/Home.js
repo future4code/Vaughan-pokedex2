@@ -7,10 +7,16 @@ import GlobalStateContext from "../../global/GlobalStateContext";
 import { useContext, useState } from "react";
 import { Input } from '@mantine/core';
 import SearchIcon from '@mui/icons-material/Search';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 
 const Home = () => {
-  const { states, loading } = useContext(GlobalStateContext)
+  const { states, loading, sets } = useContext(GlobalStateContext)
   const [query, setQuery] = useState("")
+
+  const handleChange = (event, value) => {
+    sets.setCurrentPage(value);
+  };
 
   const updateQuery = (event) => {
     setQuery(event.target.value)
@@ -48,7 +54,11 @@ const Home = () => {
       {loading && <Loading />}
       {!loading && states.pokemonsHome && pokemonList}
     </CardContainer>
+    <Stack spacing={2}>
+      <Pagination count={38} page={states.currentPage} onChange={handleChange} sx={{mb:'20px'}}/>
+    </Stack>
   </BodyContent>
+
   );
 };
 
