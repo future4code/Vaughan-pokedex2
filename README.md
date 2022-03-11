@@ -5,7 +5,7 @@ Nome dos integrantes:
 - Pessoa 2
 - Pessoa 3
 
-Link do Surge: https://astonishing-brass.surge.sh/
+Link do Surge: https://uncovered-minute.surge.sh/
 
 O que funciona:
 - Item 1
