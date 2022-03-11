@@ -9,3 +9,7 @@ export const goToPokedex = (navigate) => {
 export const goToPokemonDetail = (navigate, id) => {
     navigate(`/pokemon/${id}`)
 }
+
+export const goToBattle = (navigate) => {
+    navigate("/battle")
+}

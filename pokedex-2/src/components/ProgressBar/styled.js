@@ -5,7 +5,7 @@ export const ContainerProgressBar = styled.div`
     margin-bottom: 1rem;
 
     p {
-        width: 35vw;
+        width: 70%;
     }
 `
 

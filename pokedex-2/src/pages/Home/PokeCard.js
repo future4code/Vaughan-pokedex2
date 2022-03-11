@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import { ImgCard } from "./styled";
 import GlobalStateContext from "../../global/GlobalStateContext";
 import { useContext } from "react";
-
 import { Button, CardActionArea, CardActions } from "@mui/material";
 
 const PokeCard = (props) => {

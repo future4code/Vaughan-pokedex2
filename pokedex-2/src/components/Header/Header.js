@@ -7,7 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import PokebolaNav from "../../assets/PokebolaNav.svg";
 import pokedex from "../../assets/pokedex.jpg";
 import { HeaderImage } from "./styled";
-import { goToHome, goToPokedex } from "../../routes/coordinator"
+import { goToHome, goToPokedex, goToBattle } from "../../routes/coordinator"
 import { useNavigate } from "react-router-dom";
 import Badge from '@mui/material/Badge';
 import GlobalStateContext from "../../global/GlobalStateContext";
@@ -19,9 +19,9 @@ export const Header = () => {
 
   return (
     <div>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1 }} >
         <AppBar position="static">
-          <Toolbar>
+          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
             <Button onClick={() => goToHome(navigate)} color="inherit">
               <IconButton>
                 <img src={PokebolaNav} alt="Pokebola" />
@@ -31,10 +31,10 @@ export const Header = () => {
             <HeaderImage>
               <img src={pokedex} alt="Pokemons arte" />
             </HeaderImage>
-
+            <Button color="inherit" sx={{ padding: '0 15px' }} onClick={() => goToBattle(navigate)}>Batalha</Button>
 
             <Badge color="secondary" badgeContent={states.count} showZero>
-              <Button onClick={() => goToPokedex(navigate)} color="inherit">Pokédex</Button>
+              <Button sx={{ padding: '0 10px' }} onClick={() => goToPokedex(navigate)} color="inherit">Pokédex</Button>
             </Badge>
 
           </Toolbar>

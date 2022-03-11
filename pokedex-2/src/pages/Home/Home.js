@@ -55,7 +55,7 @@ const Home = () => {
       {!loading && states.pokemonsHome && pokemonList}
     </CardContainer>
     <Stack spacing={2}>
-      <Pagination count={38} page={states.currentPage} onChange={handleChange} sx={{mb:'20px'}}/>
+      <Pagination count={38} page={states.currentPage} onChange={handleChange} sx={{ mb: '20px' }} />
     </Stack>
   </BodyContent>
 

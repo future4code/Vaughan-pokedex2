@@ -13,7 +13,6 @@ const PokemonDetails = () => {
     const pathParams = useParams();
     const pokemon = useRequestData({}, `${BASE_URL}${pathParams.id}`)[0];
     const [currentInfo, setCurrentInfo] = useState("Estatísticas")
-    console.log(pokemon.moves)
 
     const statList =
         pokemon.stats &&
@@ -21,6 +20,7 @@ const PokemonDetails = () => {
             return (
                 <TypeContainer>
                     <ProgressBar
+                        key={statPoke.stat.name}
                         statText={statPoke.stat.name}
                         value={(statPoke.base_stat / 255) * 100}
                         label={statPoke.base_stat}
