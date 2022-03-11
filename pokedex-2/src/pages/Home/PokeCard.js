@@ -20,7 +20,6 @@ const PokeCard = (props) => {
     if (pokemon === poke) {
       states.pokemonsHome.splice(index, 1)
     }
-
   }
 
   return (

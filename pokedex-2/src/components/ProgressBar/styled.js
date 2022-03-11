@@ -8,4 +8,3 @@ export const ContainerProgressBar = styled.div`
         width: 70%;
     }
 `
-

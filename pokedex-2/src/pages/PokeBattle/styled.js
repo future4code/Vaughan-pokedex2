@@ -52,4 +52,5 @@ export const CardContainer = styled.div`
 export const Select = styled.select`
     border-radius: 5px;
     padding: 5px;
+    margin-bottom: 20px;
 `
