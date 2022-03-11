@@ -14,7 +14,7 @@ import GlobalStateContext from "../../global/GlobalStateContext";
 import { useContext } from "react";
 
 export const Header = () => {
-  const { states} = useContext(GlobalStateContext);
+  const { states } = useContext(GlobalStateContext);
   const navigate = useNavigate()
 
   return (
@@ -32,11 +32,11 @@ export const Header = () => {
               <img src={pokedex} alt="Pokemons arte" />
             </HeaderImage>
 
-            
-      <Badge color="secondary" badgeContent={states.count} showZero>
-      <Button onClick={() => goToPokedex(navigate)} color="inherit">Pokédex</Button>
-      </Badge>
-            
+
+            <Badge color="secondary" badgeContent={states.count} showZero>
+              <Button onClick={() => goToPokedex(navigate)} color="inherit">Pokédex</Button>
+            </Badge>
+
           </Toolbar>
         </AppBar>
       </Box>
