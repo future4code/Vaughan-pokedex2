@@ -14,6 +14,7 @@ const PokedexCard = (props) => {
   const pokemon = useRequestData({}, `${BASE_URL}${props.name}`)[0];
 
   const toRemove = (poke, index) => {
+    sets.setCount(states.count - 1)
     const newPokeInHome = { ...poke }
     const newPokeHome = [...states.pokemonsHome, newPokeInHome]
     sets.setPokemonsHome(newPokeHome)
@@ -46,9 +47,10 @@ const PokedexCard = (props) => {
         </CardContent>
       </CardActionArea>
       <CardActions sx={{ display: 'flex', justifyContent: 'center', padding: '1rem' }}>
-        <Button onClick={() => toRemove(pokemon, props.index)} size="small" color="secondary" variant="contained">
+        <Button onClick={() => toRemove(pokemon, props.index)} size="small" color="error" variant="contained">
           Remover
         </Button>
+        <Button onClick={props.onClickCardBtnDetails} color="success" variant="contained" size="small" >Ver detalhes</Button>
       </CardActions>
     </Card>
   );

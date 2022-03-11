@@ -29,6 +29,7 @@ const Home = () => {
             key={pokemon.name}
             name={pokemon.name}
             onClickCard={() => goToPokemonDetail(navigate, pokemon.name)}
+            onClickCardBtnDetails={() => goToPokemonDetail(navigate, pokemon.name)}
             index={index}
           />
         );
