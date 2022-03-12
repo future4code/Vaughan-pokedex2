@@ -1,21 +1,51 @@
-# POKEDEX
+# Pokédex
+<h1 align="center" id="top">:rocket: Pokédex :rocket:</h1>
 
-Nome dos integrantes: 
-- Raquel Martins
-- Sofia Pitta Sesso
-- Udimile Macedo
+<p align="center">
+  <a href="#sobre">Sobre</a> &#xa0; | &#xa0; 
+  <a href="#funciona">O que funciona</a> &#xa0; | &#xa0;
+  <a href="#nao-funciona">O que não funciona</a> &#xa0; | &#xa0;
+  <a href="#pendente">Pendências</a> &#xa0; | &#xa0;
+  <a href="#requisitos">Pré requisitos</a> &#xa0; | &#xa0;
+  <a href="#desenvolvedores">Desenvolvedores</a>
+</p>
 
-Link do Surge: https://uncovered-minute.surge.sh/
+<h2 id="sobre">:notebook: Sobre </h2>
 
-O que funciona:
-- Item 1
-- Item 2
+<p align="center">:rocket: Projeto desenvolvido conforme proposta do bootcamp ministrado pela Labenu para criação de um Website similar a pokédex do pokemon</p>
 
-O que não funciona: 
-- Item 3
-- Item 4
+<h2 id="tecnologias"> 🛠 Tecnologias </h2>
 
-Imagens: 
+As seguintes ferramentas foram usadas na construção do projeto:
+
+* React hooks
+* React Router
+* API
+* Styled-components
+* Material UI
+* Mantine
+* GlobalState
+
+<h2 id="funciona">:heavy_check_mark: O que funciona</h2>
+
+* Adicionar pokemon na pokédex
+* Remover pokemon da pokédex
+* Paginação
+* Ver detalhes do pokémon
+* Realizar batalhas entre dois pokemons da escolha do usuário
+* Responsividade
+
+<h2 id="nao-funciona">:x: O que não funciona</h2>
+
+
+<h2 id="pendente">:construction: Em desenvolvimento</h2>
+
+* Colocar imagens com os nomes de todas as evoluções do pokemon selecionado
+
+<h2 id="link">:link: Link Surge - link para visualização do site</h2>
+<a href="https://flippant-process.surge.sh/">Pokédex</a>
+<h2 id="imagens">:computer: Imagens Desktop</h2>
+
 
 ![image](https://user-images.githubusercontent.com/94647334/157991248-7ca48c0c-beab-46b8-89bc-0a79a2bc4563.png)
 
@@ -52,3 +82,49 @@ Imagens:
 ![image](https://user-images.githubusercontent.com/94647334/157993720-ea2960f7-0827-4ee8-b9ab-7c52ade68143.png)
 
 
+<h2 id="requisitos">:leftwards_arrow_with_hook: Pré-requisitos</h2>
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+<h4>:checkered_flag: Rodando o projeto </h4>
+
+```bash
+# Clone este repositório
+$ git clone <https://github.com/future4code/Vaughan-pokedex2.git>
+# Acesse a pasta do projeto no terminal
+$ cd ./Vaughan-pokedex2
+# Instale as dependências
+$ npm install
+# Para iniciar o projeto
+$ npm run start
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
+
+<h2 id="desenvolvedores">:construction_worker: Desenvolvedores</h2>
+
+<table> 
+<tr>
+
+<td align="center"><a href="https://github.com/Raquelmms"><img style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/85976494?v=4" width="100px" alt=""/>
+ <br />
+ <sub><b>Raquel Martins</b></sub></a> <a href="https://github.com/Raquelmms">🚀</a></td>
+
+ <td align="center"><a href="https://github.com/SofiaPittaSesso"><img style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/94647334?v=4" width="100px" alt=""/>
+ <br />
+ <sub><b>Sofia Pitta Sesso</b></sub></a> <a href="https://github.com/SofiaPittaSesso">🚀</a></td>
+
+
+ <td align="center"><a href="https://github.com/udimile"><img style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/76756821?v=4" width="100px" alt=""/>
+ <br />
+ <sub><b>Udimile Macedo</b></sub></a> <a href="https://github.com/udimile">🚀</a></td>
+
+
+</tr>
+
+</table>
+
+👋🏽 Entre em contato!
+
+<a href="#top">Voltar para o topo</a>
