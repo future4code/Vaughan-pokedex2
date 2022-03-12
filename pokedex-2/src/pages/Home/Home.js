@@ -9,10 +9,12 @@ import { Input } from '@mantine/core';
 import SearchIcon from '@mui/icons-material/Search';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import AlertSuccess from "../../components/AlertSuccess/AlertSuccess";
 
 const Home = () => {
   const { states, loading, sets } = useContext(GlobalStateContext)
   const [query, setQuery] = useState("")
+
 
   const handleChange = (event, value) => {
     sets.setCurrentPage(value);
@@ -20,6 +22,10 @@ const Home = () => {
 
   const updateQuery = (event) => {
     setQuery(event.target.value)
+  }
+  
+  const onClickSetAlert = () => {
+    sets.setAlertValue(false)
   }
 
   const navigate = useNavigate();
@@ -42,6 +48,7 @@ const Home = () => {
       });
 
   return (<BodyContent>
+    <AlertSuccess alertValue={states.alertValue} onClickAlert={onClickSetAlert} />
     <InputContainer>
       <Input size="md"
         icon={<SearchIcon />}

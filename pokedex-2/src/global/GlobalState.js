@@ -10,6 +10,7 @@ const GlobalState = (props) => {
     const [count , setCount] = useState(0)
     const [currentPage, setCurrentPage] = useState(1)
     const numberOfPage = 30 * (currentPage - 1)
+    const [alertValue, setAlertValue] = useState(false)
     const [data, loading] = useRequestData({}, `${BASE_URL}?limit=30&offset=${numberOfPage}`);
  
 
@@ -17,8 +18,8 @@ const GlobalState = (props) => {
         setPokemonsHome(data.results)
     }, [data, currentPage])
 
-    const states = { pokedex, pokemonsHome, count, currentPage }
-    const sets = { setPokedex, setPokemonsHome, setCount, setCurrentPage }
+    const states = { pokedex, pokemonsHome, count, currentPage, alertValue }
+    const sets = { setPokedex, setPokemonsHome, setCount, setCurrentPage, setAlertValue }
     return (
         <GlobalStateContext.Provider value={{ states, sets, loading }}>
             {props.children}

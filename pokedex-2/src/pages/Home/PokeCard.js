@@ -14,6 +14,7 @@ const PokeCard = (props) => {
 
   const addToPokedex = (poke, index) => {
     sets.setCount(states.count + 1)
+    sets.setAlertValue(true)
     const newPokeInPokedex = { ...poke }
     const newPokedex = [...states.pokedex, newPokeInPokedex]
     sets.setPokedex(newPokedex)
