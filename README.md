@@ -45,6 +45,10 @@ Imagens:
 
 ![image](https://user-images.githubusercontent.com/94647334/157993619-5c934a89-9f4c-4e62-a826-80de1b40f2e3.png)
 
-![image](https://user-images.githubusercontent.com/94647334/157993632-0e2dae50-286b-4f4f-ba9c-cb8956c44ed5.png)
+![image](https://user-images.githubusercontent.com/94647334/157993681-54895ccc-8f47-4627-a9c4-9c43eb747abf.png)
+
+![image](https://user-images.githubusercontent.com/94647334/157993709-08a7d09d-b2e4-4bfd-8c26-0b1196455d74.png)
+
+![image](https://user-images.githubusercontent.com/94647334/157993720-ea2960f7-0827-4ee8-b9ab-7c52ade68143.png)
 
 
