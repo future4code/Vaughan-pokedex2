@@ -1,9 +1,9 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Raquel Martins
+- Sofia Pitta Sesso
+- Udimile Macedo
 
 Link do Surge: https://uncovered-minute.surge.sh/
 
