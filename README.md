@@ -4,9 +4,9 @@
 <p align="center">
   <a href="#sobre">Sobre</a> &#xa0; | &#xa0; 
   <a href="#funciona">O que funciona</a> &#xa0; | &#xa0;
-  <a href="#nao-funciona">O que não funciona</a> &#xa0; | &#xa0;
   <a href="#pendente">Pendências</a> &#xa0; | &#xa0;
   <a href="#requisitos">Pré requisitos</a> &#xa0; | &#xa0;
+  <a href="#fontes">Fontes</a> &#xa0; | &#xa0;
   <a href="#desenvolvedores">Desenvolvedores</a>
 </p>
 
@@ -24,7 +24,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 * Styled-components
 * Material UI
 * Mantine
-* GlobalState
 
 <h2 id="funciona">:heavy_check_mark: O que funciona</h2>
 
@@ -35,7 +34,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 * Realizar batalhas entre dois pokemons da escolha do usuário
 * Responsividade
 
-<h2 id="nao-funciona">:x: O que não funciona</h2>
 
 
 <h2 id="pendente">:construction: Em desenvolvimento</h2>
@@ -101,6 +99,13 @@ $ npm install
 $ npm run start
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 ```
+<h2 id="fontes">Fontes</h2>
+As principais imagens utilizadas nesse projeto foram desenvolvidas por:
+
+* Emmanuel García
+* Pixelwolfie
+* Daniel Mackey
+
 
 <h2 id="desenvolvedores">:construction_worker: Desenvolvedores</h2>
 
