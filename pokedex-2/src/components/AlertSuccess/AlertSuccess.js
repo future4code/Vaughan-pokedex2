@@ -11,7 +11,8 @@ const AlertSuccess = (props) => {
   return (
     <Box sx={{ width: '100%' }}>
     <Collapse in={props.alertValue}>
-      <Alert
+      <Alert 
+      variant="filled"
         action={
           <IconButton
             aria-label="close"
