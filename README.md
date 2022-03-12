@@ -43,7 +43,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 * Colocar imagens com os nomes de todas as evoluções do pokemon selecionado
 
 <h2 id="link">:link: Link Surge - link para visualização do site</h2>
-<a href="https://flippant-process.surge.sh/">Pokédex</a>
+<a href="https://stiff-chalk.surge.sh/">Pokédex</a>
 <h2 id="imagens">:computer: Imagens Desktop</h2>
 
 
